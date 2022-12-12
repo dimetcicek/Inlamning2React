@@ -20,11 +20,11 @@
         }
     
         .menu-links {
-            height: 100%;
-            overflow: hidden;
             grid-area: menulinks;
-            display: grid;
+            display: none;
+            overflow: hidden;
             font-weight: 400;
+            height: 100%;  
     
             .menu-link {
                 color: $color-dark;
@@ -78,6 +78,13 @@
                 background-color: $color-dark;
                 text-decoration: none;
                 box-shadow: 0 0 6px 4px $color-shadow;
+            }
+
+            .btn-menu-icon {
+                color: $color-white;
+                background-color: $color-dark;
+                border: none;
+                outline: none;
             }
 
         }
