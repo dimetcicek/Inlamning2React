@@ -111,3 +111,25 @@
         }
     }
 }
+
+
+
+
+<h2>Come in Contact with Us</h2>
+<form onSubmit={handleSubmit} noValidate>
+    <div>
+        <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
+        <div className="errorMessage">{formErrors.name}</div>
+    </div>
+    <div>
+        <input id="email" type="email" placeholder="Your Mail" value={contactForm.email} onChange={handleChange}/>
+        <div className="errorMessage">{formErrors.email}</div>
+    </div>
+    <div className ="textarea">
+        <textarea id="comment" placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
+        <div className="errorMessage">{formErrors.comment}</div>
+    </div>
+    <div className="formBtn">
+        <button type="submit" className="btn-theme">Post Comments</button>
+    </div>
+</form>

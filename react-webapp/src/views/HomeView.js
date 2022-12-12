@@ -6,6 +6,8 @@ import ProductGridSection from '../sections/ProductGridSection'
 
 const HomeView = () => {
 
+  window.top.document.title = 'Fixxo.'
+
   const [featuredProducts, setFeaturedProducts] = useState ([
     { id: 1, name: "Modern Brown Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/9604177/pexels-photo-9604177.jpeg?auto=compress&cs=tinysrgb&w=1600" },
     { id: 2, name: "Modern Brown Blouse", category: "Fashion", price: "$35.00", rating: 5, img: "https://images.pexels.com/photos/6311615/pexels-photo-6311615.jpeg?auto=compress&cs=tinysrgb&w=1600" },
