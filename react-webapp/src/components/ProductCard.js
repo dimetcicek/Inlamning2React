@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import letsbe from '../assets/images/lets-be.svg'
 
 const ProductCard = ({product}) => {
 

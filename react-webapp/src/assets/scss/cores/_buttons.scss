@@ -34,3 +34,16 @@
         text-decoration: none;
     }
 }
+
+
+.btn-dark {
+    position: relative;
+    text-align: center;
+    background-color: $color-dark;
+    color: $color-white;
+    padding: 25px 50px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    width: 100%;
+
+}

@@ -1,0 +1,107 @@
+.banner {
+    margin-top: 80px;
+
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        gap: 10px;
+        
+    }
+
+    .lets-be {
+
+        h1 {
+            display: inline-block;
+            position: absolute;
+            top: 90px;
+            right: 600px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        p {
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+            right: 525px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        .letsbeBtn {
+            position: absolute;
+            right: 580px;
+            top: 238px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-theme {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            color: $color-dark;
+            background-color: $color-white;
+            font-weight: 600;
+
+            &:hover {
+                background-color: $color-dark;
+            }
+        }
+
+
+
+    }
+
+    .pamela {
+
+        h1 {
+            display: inline-block;
+            position: absolute;
+            top: 90px;
+            left: 500px;
+            font-size: 45px;
+            font-weight: 700;
+            color: $color-white;
+        }
+
+        p {
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+            left: 500px;
+            font-size: 45px;
+            font-weight: 700;
+            color: $color-white;
+        }
+
+        .pamelaBtn {
+            position: absolute;
+            left: 500px;
+            top: 238px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-dark {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            font-weight: 600;
+            color: $color-white;
+            background-color: $color-dark;
+
+            &:hover {
+                color: $color-dark;
+                background-color: $color-white;
+            }
+        }
+
+    }
+
+
+}

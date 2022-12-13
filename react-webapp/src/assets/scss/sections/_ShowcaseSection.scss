@@ -1,0 +1,57 @@
+.showcase {
+    background-color: #E6E6E6;
+
+    .container {
+        position: relative;
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        align-items: center;
+        
+        .showcase-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .showcaseImg1 {
+                margin-left: -120px;
+            }
+        
+            .showcaseImg2 {
+                margin-right: -120px;
+            }
+        }
+    
+        .showcase-text {
+            position: absolute;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            bottom: 250px;
+            left: 600px;
+            
+
+            h1 {
+                font-size: 65px;
+                font-weight: 800;
+            }
+        
+            p {
+                display: flex;
+                margin-top: 50px;
+                margin-bottom: 35px;
+                font-size: 20px;
+            }
+
+            .shopBtn {
+                display: inline-block;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+        }
+
+
+    }
+
+
+}

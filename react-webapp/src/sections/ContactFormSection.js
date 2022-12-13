@@ -40,6 +40,8 @@ const ContactFormSection = () => {
         setFormErrors(validate(contactForm))
     }
 
+    
+
     return (
         <section className="contact-form">
             <div className="container">

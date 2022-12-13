@@ -1,6 +1,5 @@
 import './style.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import HomeView from './views/HomeView';
 import CategoriesView from './views/CategoriesView';
 import ProductsView from './views/ProductsView';
