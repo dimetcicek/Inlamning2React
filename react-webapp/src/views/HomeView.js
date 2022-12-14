@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import BannerSection from '../sections/BannerSection'
+import FlashSaleBotSection from '../sections/FlashSaleBotSection'
 import FlashSaleTopSection from '../sections/FlashSaleTopSection'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import ShowcaseSection from '../sections/ShowcaseSection'
+import SiteInfoSection from '../sections/SiteInfoSection'
 
 
 const HomeView = () => {
@@ -38,6 +40,8 @@ const HomeView = () => {
       <ProductGridSection title="Featured Products" products={featuredProducts} />
       <BannerSection />
       <FlashSaleTopSection />
+      <FlashSaleBotSection />
+      <SiteInfoSection />
       <FooterSection />
     </> 
   )

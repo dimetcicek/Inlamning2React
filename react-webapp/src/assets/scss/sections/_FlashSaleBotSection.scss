@@ -1,4 +1,4 @@
-.flash-top {
+.flash-bot {
     display: flex;
     align-items: center;
     width: 66%;
@@ -6,14 +6,14 @@
     margin-top: 50px;
     margin-bottom: 50px;
     
-    .container1 {
+    .container2 {
         background-color: #BBBBBB;
         display: inline-block;
         justify-content: space-between;
         width: 50%;
         height: 860px;
-        margin-right: auto;
-
+        margin-left: auto;
+        
         h1 {
             display: block;
             text-align: center;
@@ -24,7 +24,7 @@
             font-size: 45px;
         }
 
-        .flash-topBtn {
+        .flash-botBtn {
             display: inline-block;
             align-items: center;
             margin-left: 38%;
@@ -45,13 +45,12 @@
         }
     }
 
-    .flash-top-product {
+    .flash-bot-product {
         width: 40%;
-
 
         .flash-product {
             position: relative;
-            margin-right: 20%;
+            margin-left: 20%;
         }
     }
 }

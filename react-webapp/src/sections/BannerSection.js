@@ -19,7 +19,7 @@ const BannerSection = () => {
                 <h1>Let's Be</h1>
                 <p>Conscious</p>
                 <div className="letsbeBtn">
-                    <button className="btn-theme">FLASH SALE</button>
+                    <button className="btn-white">FLASH SALE</button>
                 </div>
             </div>
         </div>

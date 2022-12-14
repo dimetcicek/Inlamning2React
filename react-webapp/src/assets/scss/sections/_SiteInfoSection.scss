@@ -1,0 +1,60 @@
+.site-info {
+    margin-bottom: 70px;
+    display: block;
+    margin-left: 600px;
+    margin-right: 600px;
+    border-top: 1px solid $color-gray;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .customer-support img,
+        .secured-payment img,
+        .free-delivery img,
+        .day-reuters img {
+            margin-top: 60px;
+            margin-left: 100px;
+            padding: 8px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 0 6px 6px $color-shadow;
+            border-radius: 50%;
+        }
+
+        .customer-support h1,
+        .secured-payment h1,
+        .free-delivery h1 {
+            padding-top: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+            left: 20px;
+        }
+
+        .day-reuters h1{
+            padding-top: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            position: relative;
+            left: 40px;
+        }
+
+        .customer-support p,
+        .secured-payment p,
+        .free-delivery p,
+        .day-reuters p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $color-darkgray;
+            margin-top: 25px;
+            max-width: 250px;
+        }
+
+
+    }
+
+
+}

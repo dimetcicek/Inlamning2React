@@ -1,14 +1,14 @@
 import React from 'react'
-import showcaseimg1 from '../assets/images/showcase-img-1.svg'
-import showcaseimg2 from '../assets/images/showcase-img-2.svg'
+import showcase1 from '../assets/images/showcase1.png'
+import showcase2 from '../assets/images/showcase2.png'
 
 const ShowcaseSection = () => {
   return (
     <section className="showcase">
         <div className ="container">
             <div className="showcase-body">
-            <img className="showcaseImg1" src={showcaseimg1}/>
-            <img className="showcaseImg2" src={showcaseimg2}/>
+            <img className="showcaseImg1" src={showcase1}/>
+            <img className="showcaseImg2" src={showcase2}/>
             </div>
             <div className="showcase-text">
             <h1>SALE UP</h1>
