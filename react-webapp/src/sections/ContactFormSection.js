@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 const ContactFormSection = () => {
-    const [contactForm, setContactForm] = useState({name: '', email: '', comment: ''})
+    const [contactForm, setContactForm] = useState({name: '', email: '', comments: ''})
     const [nameError, setNameError] = useState('')
     const [emailError, setEmailError] = useState('')
-    const [commentError, setCommentError] = useState('')
+    const [commentsError, setCommentsError] = useState('')
     const [submitted, setSubmitted] = useState(false)
 
     const validateName = (name) => {
@@ -27,12 +27,12 @@ const ContactFormSection = () => {
         return error;
     }
 
-    const validateComment = (comment) => {
+    const validateComments = (comments) => {
         var error
 
-        if(!comment)
+        if(!comments)
             error = "You must enter a comment"
-        else if(comment.length < 5)
+        else if(comments.length < 5)
             error = "Your comment must contain at least five characters"
 
         return error;
@@ -50,18 +50,23 @@ const ContactFormSection = () => {
         setEmailError(validateEmail(value))
     }
 
-    const handleCommentChange = (e) => {
+    const handleCommentsChange = (e) => {
         const {id, value} = e.target
         setContactForm({...contactForm, [id]: value})
-        setCommentError(validateComment(value))
+        setCommentsError(validateComments(value))
     }
 
-   const handleSubmit = (e) => {
+    const handleSubmit = (e) =>
+    {
         e.preventDefault()
         const errors = {}
-        var nameError = validateName(contactForm.name)
-        var emailError = validateEmail(contactForm.email)
-        var commentError = validateComment(contactForm.comment)
+        let name = contactForm.name
+        let email = contactForm.email
+        let comments = contactForm.comments
+
+        var nameError = validateName(name)
+        var emailError = validateEmail(email)
+        var commentsError = validateComments(comments)
 
         if(nameError) {
             errors.name = nameError
@@ -73,15 +78,42 @@ const ContactFormSection = () => {
             setEmailError(errors.email)
         }
 
-        if(commentError) {
-            errors.comment = commentError
-            setCommentError(errors.comment)
+        if(commentsError) {
+            errors.comments = commentsError
+            setCommentsError(errors.comments)
         }
 
-        if(Object.keys(errors).length === 0)
-            setSubmitted(true)
-        else   
-            setSubmitted(false)
+       if (Object.keys(errors).length === 0)
+       {
+           var jsonData = JSON.stringify({ name, email, comments })
+
+           setContactForm({ name: '', email: '', comments: '' })
+           setNameError('')
+           setEmailError('')
+           setCommentsError('')
+
+           fetch("https://win22-webapi.azurewebsites.net/api/contactform",
+               {
+                   method: "POST",
+                   headers:
+                   {
+                       "Content-Type": "application/json"
+                   },
+                   body: jsonData
+               })
+           .then(results => {
+               if (results.status === 200) {
+                   setSubmitted(true)
+               }
+               else {
+                   setSubmitted(false)
+               }
+           })
+       }
+       else
+       {
+           setSubmitted(false)
+       }
     }
   
 
@@ -110,8 +142,8 @@ const ContactFormSection = () => {
                                 <div className="errorMessage">{emailError}</div>
                             </div>
                             <div className ="textarea">
-                                <textarea id="comment" placeholder="Comments" value={contactForm.comment} onChange={handleCommentChange}></textarea>
-                                <div className="errorMessage">{commentError}</div>
+                                <textarea id="comments" placeholder="Comments" value={contactForm.comments} onChange={handleCommentsChange}></textarea>
+                                <div className="errorMessage">{commentsError}</div>
                             </div>
                             <div className="formBtn">
                                 <button type="submit" className="btn-theme">Post Comments</button>
